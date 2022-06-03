@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+   font-family: monospace;
+  color: #333;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header-item {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.header-item-element {
+  padding: 5px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.content-item {
+  flex: 50%;
+  overflow-wrap: break-word;
+  width: 50%;
+}
+
+.line-number {
+  width: 40px;
+  text-align: right;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: .8rem;
+  background-color: rgb(219, 219, 219);
+  height:calc(100vh - 80px);
+  position: absolute;
+  overflow-y: scroll;
+}
+.line-number::-webkit-scrollbar {
+  width: 0;  
+  background: transparent;  
+}
+.text-area{
+  margin-left: 40px;
+  height: 100%;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+.text-area-content,.text-area-content:focus {
+  outline: none;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  overflow-y: scroll;
+  padding: 8px;
+}
+
+.input-section {
+  background-color: #999;
+}
+
+
+.preview-container{
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  line-height: 1.5;
+  color:rgb(56, 56, 56);
+}
+
+.text-muted {
+  color: #999;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* preview */
+.preview-list {
+  padding-left: 3rem;
+}
+
+.preview-list-item{
+  margin-bottom: 1rem;
+}
+
+.preview-block{
+  margin-bottom: 1rem;
+}
+
+.preview-table,
+.preview-tr,
+.preview-td,
+.preview-th {
+  border: 1px solid #555;
+  padding: 5px;
+} 
+
+.preview-table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
