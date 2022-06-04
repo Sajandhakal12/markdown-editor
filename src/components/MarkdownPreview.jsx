@@ -13,12 +13,19 @@ const MarkdownPreview = ({ value }) => {
           rehypePlugins={[rehypeRaw]}
           remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
           components={{
-            ul: ({ ...props }) => <ul className="preview-list" {...props} />,
+            ul: ({ className, ...props }) => (
+              <ul
+                className={
+                  className ? `preview-list ${className}` : `preview-list`
+                }
+                {...props}
+              />
+            ),
             ol: ({ ...props }) => (
               <ol className="preview-list-item" {...props} />
             ),
-            li: ({ ...props }) => (
-              <li className="preview-list-item" {...props} />
+            li: ({ node, ...props }) => (
+              <li className={`preview-list-item`} {...props} />
             ),
             p: ({ ...props }) => <p className="preview-block" {...props} />,
             h1: ({ ...props }) => <h1 className="preview-block" {...props} />,

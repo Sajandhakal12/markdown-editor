@@ -138,6 +138,11 @@ body {
   padding-left: 3rem;
 }
 
+.contains-task-list{
+  list-style: none;
+  padding-left: 1rem;
+}
+
 .preview-list-item{
   margin-bottom: 1rem;
 }
